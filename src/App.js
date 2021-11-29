@@ -16,7 +16,9 @@ function App() {
       </main>
     </div>
     <footer className="App-footer">
+      <small>
       Coded by Mehrnaz Zand
+      </small>
     </footer>
     </div>
   );
