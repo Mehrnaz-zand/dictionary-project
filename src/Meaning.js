@@ -7,7 +7,7 @@ export default function Meaning(props){
             <h3 className= "mt-4 text-capitalize">
             {props.meaning.partOfSpeech}
             </h3>
-            <p className="text-capitalize">
+            <div className="text-capitalize">
             {props.meaning.definitions.map(function(definition, index){
                 return(
                     <div key= {index}>
@@ -20,7 +20,7 @@ export default function Meaning(props){
                         <br/>
                         {definition.synonyms.map(function(synonym, index){
                             return(
-                                <div key= {index} className="d-inline ms-1 text-capitalize">
+                                <div key= {index} className="d-inline ms-1 text-muted text-capitalize">
                                 {synonym},
                                 
                                 </div>
@@ -31,6 +31,7 @@ export default function Meaning(props){
                     </div>
                        )
                     })}
-        </p>        
+                    
+                </div>        
         </div>)
 }

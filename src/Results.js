@@ -11,8 +11,9 @@ export default function Results(props){
             <h2 className="text-capitalize mt-5">
                 {props.results.word}
             </h2>
-            {props.results.phonetic}
-            <a href={props.results.phonetics[0].audio} title = "Listen"> 🔊</a>
+            /{props.results.phonetic}/
+            <a href={props.results.phonetics[0].audio} 
+            className= "text-decoration-none" title = "Listen"> 🔊</a>
             {props.results.meanings.map(function(meaning, index){
                 return (
                 <div key={index}>

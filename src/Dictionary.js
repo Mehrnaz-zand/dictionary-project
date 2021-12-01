@@ -23,7 +23,7 @@ export default function Dictionary(){
 
     return (
         <div className="Dictionary">
-            <form onSubmit={search} className ="text-center">
+            <form onSubmit={search} className ="text-center" target="_blank" rel="noreferrer">
                 <input type="text" placeholder="Search a word" onChange={handleChange}/>
                 
             </form>
