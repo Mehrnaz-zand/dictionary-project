@@ -1,3 +1,25 @@
 .Dictionary {
+  color: var(--light-color);
   margin: 30px;
+}
+.Dictionary section {
+  background-color: var(--middle-color);
+  padding: 30px;
+  border: 1px solid var(--darkest-color);
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.Dictionary input {
+  border: 1px solid var(--darkest-color);
+  color: var(--darkest-color);
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--light-color);
+}
+.Dictionary input:focus {
+  border: 1px solid green;
+  color: var(--darkest-color);
 }

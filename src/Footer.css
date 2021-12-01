@@ -1,0 +1,11 @@
+.Footer {
+  text-align: center;
+  font-size: 14px;
+}
+.Footer a {
+  text-decoration: none;
+  color: var(--middle-color);
+}
+.Footer a:hover {
+  color: var(--dark-color);
+}
