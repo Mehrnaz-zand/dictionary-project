@@ -7,12 +7,12 @@ function App() {
     <div className="container">
     <div className="App">
       <header className="App-header">
-        <h1>
+        <h1 className ="text-center">
         Dictionary App
         </h1>
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultWord="sun" />
       </main>
     </div>
     <footer className="App-footer">
