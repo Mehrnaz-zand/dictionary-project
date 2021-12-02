@@ -5,11 +5,11 @@ import Results from "./Results.js";
 import Photos from "./Photos.js"
 
 
-export default function Dictionary(props){
-    let [keyword, setKeyword] = useState(props.defaultWord); 
+export default function Dictionary(){
+    let [keyword, setKeyword] = useState(""); 
     let [results, setResults] = useState(null);
-    let [loaded, setLoaded] = useState(false);
     let [photos, setPhotos] = useState(null);
+    let [loaded, setLoaded] = useState(false);
 
     function searchKeyword(response){
      setResults(response.data[0]);
@@ -23,6 +23,7 @@ export default function Dictionary(props){
         setKeyword(event.target.value);
     }
     function search(){
+        setLoaded(true);
         //https://dictionaryapi.dev/
          let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
          axios.get(apiUrl).then(searchKeyword);
@@ -40,10 +41,7 @@ export default function Dictionary(props){
         event.preventDefault();
         search();
     }
-    function load(){
-        setLoaded(true);
-        search();
-    }
+  
     if (loaded){
     return (
         <div className="Dictionary">
@@ -51,7 +49,6 @@ export default function Dictionary(props){
             <form onSubmit={handleSubmit} className ="text-center" 
             target="_blank" rel="noreferrer" title="Search a word...">
                 <input type="text" placeholder="Search a word..." 
-                defaultValue={props.defaultWord}
                 onChange={handleChange}/>
             </form>
             <div className="hint">
@@ -63,6 +60,6 @@ export default function Dictionary(props){
         </div>
     )
 } else{
-    load();
+    search()
     return null
 } }
