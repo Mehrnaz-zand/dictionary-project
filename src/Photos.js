@@ -2,8 +2,9 @@ import React from "react";
 import "./Photos.css";
 
 export default function Photos(props){
-    console.log(props.photos);
+ 
     if (props.photos){
+        
     return (
         <section className = "Photos">
             <div className="row">
@@ -22,6 +23,12 @@ export default function Photos(props){
         </section>
     )
 } else {
-    return null
+     return (
+        <section className = "Photos">
+           
+            <p>No pictures available!</p>
+                    </section>
+
+                )
 }
 }

@@ -5,11 +5,11 @@ import Results from "./Results.js";
 import Photos from "./Photos.js"
 
 
-export default function Dictionary(){
-    let [keyword, setKeyword] = useState(""); 
+export default function Dictionary(props){
+    let [keyword, setKeyword] = useState(props.defaultWord); 
     let [results, setResults] = useState(null);
-    let [photos, setPhotos] = useState(null);
     let [loaded, setLoaded] = useState(false);
+    let [photos, setPhotos] = useState(null);
 
     function searchKeyword(response){
      setResults(response.data[0]);
@@ -23,7 +23,6 @@ export default function Dictionary(){
         setKeyword(event.target.value);
     }
     function search(){
-        setLoaded(true);
         //https://dictionaryapi.dev/
          let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
          axios.get(apiUrl).then(searchKeyword);
@@ -41,25 +40,31 @@ export default function Dictionary(){
         event.preventDefault();
         search();
     }
-  
+    function load(){
+        setLoaded(true);
+        search();
+    }
     if (loaded){
+       
     return (
         <div className="Dictionary">
             <section>
-            <form onSubmit={handleSubmit} className ="text-center" 
-            target="_blank" rel="noreferrer" title="Search a word...">
-                <input type="text" placeholder="Search a word..." 
+            <form onSubmit={handleSubmit} className ="text-center"  
+            target="_blank" rel="noreferrer" title="Search a word..."
+            >
+                <input type="search" placeholder="Search a word..." 
+                defaultValue={props.defaultWord}
                 onChange={handleChange}/>
             </form>
             <div className="hint">
                 i.e. sun, happy, blue, joy...
             </div>
             </section>
-        <Results results = {results} />
-       <Photos photos = {photos} keyword = {keyword}ss/>
+        <Results results = {results} keyword={keyword} />
+       <Photos photos = {photos} keyword = {keyword}/>
         </div>
     )
 } else{
-    search()
+    load();
     return null
 } }

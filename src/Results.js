@@ -5,6 +5,7 @@ import Phonetics from "./Phonetics"
 
 
 export default function Results(props){
+   
     if (props.results){
     return (
         <div className = "Results">
@@ -31,6 +32,6 @@ export default function Results(props){
         </div>
     );
 }else {
-    return (null)
+    return null
 }
 }

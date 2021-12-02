@@ -13,7 +13,7 @@ function App() {
         </h1>
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultWord="sun" />
       </main>
     </div>
     <Footer />
