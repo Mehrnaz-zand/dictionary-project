@@ -1,3 +1,7 @@
+.App {
+  max-width: 860px;
+  margin: 0 auto;
+}
 .App form {
   margin: 30px auto;
 }

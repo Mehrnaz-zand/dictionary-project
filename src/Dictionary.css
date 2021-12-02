@@ -1,9 +1,9 @@
 .Dictionary {
-  color: var(--light-color);
+  color: var(--darkest-color);
   margin: 30px;
 }
 .Dictionary section {
-  background-color: var(--middle-color);
+  background-color: var(--light-color);
   padding: 30px;
   border: 1px solid var(--darkest-color);
   margin: 20px 0;

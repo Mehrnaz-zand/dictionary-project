@@ -4,7 +4,7 @@
 }
 .Footer a {
   text-decoration: none;
-  color: var(--middle-color);
+  color: var(--light-color);
 }
 .Footer a:hover {
   color: var(--dark-color);
