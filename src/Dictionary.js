@@ -13,6 +13,11 @@ export default function Dictionary(props){
 
     function searchKeyword(response){
      setResults(response.data[0]);
+      let pexelApiKey ="563492ad6f91700001000001327dcdb63baf4ebd84189650a23bdfe8";
+        let pexelApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+        let headers = { Authorization: `Bearer ${pexelApiKey}` };
+        axios.get(pexelApiUrl, { headers: headers }).then(searchPhoto);
+     
     }
    
     function searchPhoto(response){
@@ -28,10 +33,7 @@ export default function Dictionary(props){
          axios.get(apiUrl).then(searchKeyword);
 
 
-        let pexelApiKey ="563492ad6f91700001000001327dcdb63baf4ebd84189650a23bdfe8";
-        let pexelApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
-        let headers = { Authorization: `Bearer ${pexelApiKey}` };
-        axios.get(pexelApiUrl, { headers: headers }).then(searchPhoto);
+       
   }
 
 
