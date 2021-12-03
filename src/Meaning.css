@@ -1,5 +1,5 @@
 .Meaning {
-  line-height: 1;
+  line-height: 1.5;
   margin: 0;
 }
 .Meaning h3 {
@@ -13,6 +13,14 @@
 .Meaning .example {
   margin-top: 10px;
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.6;
   font-style: italic;
+}
+@media (max-width: 567px) {
+  .Meaning .definition {
+    font-size: 14px;
+  }
+  .Meaning .example {
+    font-size: 12px;
+  }
 }

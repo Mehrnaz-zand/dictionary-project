@@ -26,3 +26,14 @@
 input[type="search"]::-webkit-search-cancel-button {
   cursor: pointer;
 }
+@media (max-width: 567px) {
+  .Dictionary section {
+    padding: 20px;
+  }
+  .Dictionary input {
+    padding: 1px;
+  }
+  .Dictionary .hint {
+    font-size: 12px;
+  }
+}

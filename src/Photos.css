@@ -2,3 +2,8 @@
   margin: 5px auto;
   border-radius: 5px;
 }
+@media (max-width: 567px) {
+  .Photos .col-4 {
+    padding: 5px;
+  }
+}

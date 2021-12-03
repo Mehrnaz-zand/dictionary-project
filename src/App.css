@@ -9,3 +9,6 @@
   text-align: center;
   margin: 30px auto;
 }
+.App h1 {
+  font-size: 24px;
+}
