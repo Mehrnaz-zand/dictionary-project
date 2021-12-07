@@ -17,6 +17,11 @@
   opacity: 0.7;
   font-weight: bold;
 }
+.Phonetics .audio {
+  color: red;
+  max-width: 50%;
+}
+
 @media (max-width: 567px) {
   .Phonetics .text {
     font-size: 12px;
